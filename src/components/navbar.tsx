@@ -1,22 +1,26 @@
-"use client"
+"use client";
 
-import { Menu } from 'lucide-react'
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 export function NavbarComponent() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 mx-auto w-full max-w-7xl border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
-          <span className="text-xl font-bold">Designo</span>
+          <Image
+            src="/assets/shared/desktop/logo-dark.png"
+            alt="Logo"
+            width={150}
+            height={150}
+          />
         </Link>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -54,17 +58,26 @@ export function NavbarComponent() {
         </Sheet>
 
         <nav className="hidden lg:flex lg:items-center lg:gap-8">
-          <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
             Our Company
           </Link>
-          <Link href="/locations" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/locations"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
             Locations
           </Link>
-          <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/contact"
+            className="text-sm font-medium transition-colors hover:text-primary"
+          >
             Contact
           </Link>
         </nav>
       </div>
     </header>
-  )
+  );
 }
