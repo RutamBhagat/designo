@@ -1,17 +1,20 @@
-'use client'
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function ContactSectionComponent() {
   return (
     <section className="container mx-auto px-4 py-16">
-      <div className="bg-[#E7816B] text-white rounded-lg p-8 md:p-16 relative overflow-hidden">
-        <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
+      <div className="relative overflow-hidden rounded-lg bg-[#E7816B] p-8 text-white md:p-16">
+        <div className="relative z-10 grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's talk about your project</h2>
-            <p className="text-lg mb-8">
-              Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+              Let&apos;s talk about your project
+            </h2>
+            <p className="mb-8 text-lg">
+              Ready to take it to the next level? Contact us today and find out
+              how our expertise can help your business grow.
             </p>
           </div>
           <div className="text-center md:text-right">
@@ -20,8 +23,8 @@ export function ContactSectionComponent() {
             </Button>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[url('/assets/shared/desktop/bg-pattern-call-to-action.svg')] opacity-10 bg-no-repeat bg-center" />
+        <div className="absolute inset-0 bg-[url('/assets/shared/desktop/bg-pattern-call-to-action.svg')] bg-center bg-no-repeat opacity-10" />
       </div>
     </section>
-  )
+  );
 }
