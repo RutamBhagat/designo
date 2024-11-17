@@ -72,17 +72,19 @@ function LocationCard({
 function CTASection() {
   return (
     <section className="px-6 py-16">
-      <div className="relative overflow-hidden rounded-2xl bg-[#E7816B] px-6 py-16 text-center text-white md:px-12">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="mb-6 text-4xl font-medium">
-            Let&apos;s talk about your project
-          </h2>
-          <p className="mb-8 text-lg">
-            Ready to take it to the next level? Contact us today and find out
-            how our expertise can help your business grow.
-          </p>
-          <Link href="/contact">
-            <Button className="bg-white px-8 py-4 text-base font-medium uppercase text-black hover:bg-white/90">
+      <div className="relative overflow-hidden rounded-2xl bg-[#E7816B] px-8 py-20 text-center text-white md:px-16 md:text-left">
+        <div className="mx-auto md:flex md:items-center md:justify-between md:gap-8">
+          <div className="md:max-w-xl">
+            <h2 className="mb-6 text-4xl font-medium leading-tight">
+              Let&apos;s talk about your project
+            </h2>
+            <p className="mb-8 text-lg md:mb-0 md:text-xl">
+              Ready to take it to the next level? Contact us today and find out
+              how our expertise can help your business grow.
+            </p>
+          </div>
+          <Link href="/contact" className="inline-block">
+            <Button className="h-14 bg-white px-10 text-base font-medium uppercase text-black transition-colors hover:bg-white/90">
               Get in touch
             </Button>
           </Link>
