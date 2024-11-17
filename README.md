@@ -1,29 +1,119 @@
-# Create T3 App
+---
+title: "Designo: Multi-page Agency Website"
+publishedAt: "2024-11-17"
+summary: "Built a responsive multi-page website for a design agency, featuring location maps integration, contact form validation, and optimal layouts for all devices. Implemented using Next.js, TypeScript, and Tailwind CSS."
+images:
+  - "https://github.com/user-attachments/assets/80f32a0f-65a8-44da-a7c0-82909696a2ea"
+  - "https://github.com/user-attachments/assets/ab2047cd-f282-44a2-bf69-e6dd897b691f"
+  - "https://github.com/user-attachments/assets/1e1c11c1-ca9c-4b90-a795-955ae3f142a9"
+  - "https://github.com/user-attachments/assets/0e78277c-3823-48b6-b07b-be229d7a585c"
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+team:
+  - name: "Rutam Bhagat"
+    role: "Frontend Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://github.com/RutamBhagat"
+---
 
-## What's next? How do I make an app with this?
+# Designo: Multi-page Agency Website
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Overview
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Designo is a comprehensive multi-page website for a design agency, built as a solution to the Frontend Mentor premium challenge. This project implements a pixel-perfect design with responsive layouts and interactive features, including location mapping and form validation. The frontend is built using Next.js, TypeScript, and Tailwind CSS, focusing on delivering a seamless user experience across all devices.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+**Frontend:** [Live Site URL](https://audiophile-ecom-eight.vercel.app)
 
-## Learn More
+**Frontend Repo:** [Repository URL](https://github.com/RutamBhagat/audiophile-ecom)
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Demo Video
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+[Watch the Walkthrough](https://github.com/user-attachments/assets/64153872-f95f-4057-93c7-5937b9990344)
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Key Features
 
-## How do I deploy this?
+- **Responsive Design**: Fully responsive layouts optimized for mobile, tablet, and desktop viewports
+- **Interactive Maps**: Integration with LeafletJS for displaying office locations
+- **Contact Form**: Comprehensive form validation with error states and feedback
+- **Multi-page Layout**: Consistent design system across multiple pages
+- **Location Pages**: Interactive maps showing actual office locations
+- **Hover States**: Interactive elements with engaging hover effects
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Technologies Used
+
+- **Frontend**: Next.js, TypeScript for type-safe development
+- **Styling**: Tailwind CSS for utility-first styling
+- **Components**: Shadcn UI for consistent design system
+- **Mapping**: LeafletJS for interactive location maps
+- **Form Handling**: React Hook Form with validation
+- **Animation**: Framer Motion for smooth transitions
+
+## Challenges and Learnings
+
+Building Designo provided valuable experience in:
+
+- **Multi-page Architecture**: Creating a consistent experience across multiple pages
+- **Map Integration**: Implementing secure and responsive map features
+- **Form Validation**: Building robust form validation systems
+- **Performance**: Optimizing assets and page load times
+
+## Optimizations
+
+1. **Map Implementation**
+
+   - Secure integration of LeafletJS
+   - Optimized map loading and interaction
+   - Responsive map containers
+
+2. **Performance**
+
+   - Implemented static generation for pages
+   - Optimized asset loading and delivery
+   - Efficient routing between pages
+
+3. **User Experience**
+   - Smooth page transitions
+   - Enhanced form feedback
+   - Responsive design implementations
+
+## Getting Started
+
+Follow these steps to set up and run the Designo website locally.
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm or yarn package manager
+
+### Installation Steps
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/RutamBhagat/audiophile-ecom
+   cd audiophile-ecom
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the Development Server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+## Outcome
+
+Designo demonstrates the ability to build a modern, multi-page website with complex features like map integration and form validation. The project showcases responsive design principles and frontend optimization techniques while maintaining clean, maintainable code.
+
+# Screenshots
+
+![5](https://github.com/user-attachments/assets/ec8d81ef-ca79-42e5-8e62-523cce1737a0)
+![6](https://github.com/user-attachments/assets/3c03109d-5bce-499c-a92a-2f3379d227b4)
+![7](https://github.com/user-attachments/assets/36bdaab0-a368-4de6-ab79-ebef79e9231c)
