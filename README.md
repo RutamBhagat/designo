@@ -1,20 +1,3 @@
----
-title: "Designo: Multi-page Agency Website"
-publishedAt: "2024-11-17"
-summary: "Built a responsive multi-page website for a design agency, featuring location maps integration, contact form validation, and optimal layouts for all devices. Implemented using Next.js, TypeScript, and Tailwind CSS."
-images:
-  - "https://github.com/user-attachments/assets/80f32a0f-65a8-44da-a7c0-82909696a2ea"
-  - "https://github.com/user-attachments/assets/ab2047cd-f282-44a2-bf69-e6dd897b691f"
-  - "https://github.com/user-attachments/assets/1e1c11c1-ca9c-4b90-a795-955ae3f142a9"
-  - "https://github.com/user-attachments/assets/0e78277c-3823-48b6-b07b-be229d7a585c"
-
-team:
-  - name: "Rutam Bhagat"
-    role: "Frontend Developer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://github.com/RutamBhagat"
----
-
 # Designo: Multi-page Agency Website
 
 ## Overview
@@ -27,7 +10,7 @@ Designo is a comprehensive multi-page website for a design agency, built as a so
 
 ## Demo Video
 
-[Watch the Walkthrough](https://github.com/user-attachments/assets/64153872-f95f-4057-93c7-5937b9990344)
+[Watch the Walkthrough](https://github.com/user-attachments/assets/9c60cf11-9e05-497f-99b9-20130f52a17b)
 
 ## Key Features
 
@@ -114,6 +97,8 @@ Designo demonstrates the ability to build a modern, multi-page website with comp
 
 # Screenshots
 
-![5](https://github.com/user-attachments/assets/ec8d81ef-ca79-42e5-8e62-523cce1737a0)
-![6](https://github.com/user-attachments/assets/3c03109d-5bce-499c-a92a-2f3379d227b4)
-![7](https://github.com/user-attachments/assets/36bdaab0-a368-4de6-ab79-ebef79e9231c)
+![5](https://github.com/user-attachments/assets/6b2617f7-0746-4aad-8281-4ee06c109384)
+![6](https://github.com/user-attachments/assets/a3031194-bae9-463f-9f4e-e2d96816f1a5)
+![7](https://github.com/user-attachments/assets/3ccfcd62-740f-46c8-bf9d-9c6150bb7011)
+![8](https://github.com/user-attachments/assets/b11b8196-400c-4834-b7fe-c9562c31c95f)
+
