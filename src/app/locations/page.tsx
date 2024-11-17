@@ -1,5 +1,96 @@
-import { CTASection } from "@/components/cta-section";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+
+interface LocationCardProps {
+  title: string;
+  officeName: string;
+  address: string[];
+  phone: string;
+  email: string;
+  mapImage: string;
+  reverse?: boolean;
+}
+
+function LocationCard({
+  title,
+  officeName,
+  address,
+  phone,
+  email,
+  mapImage,
+  reverse = false,
+}: LocationCardProps) {
+  return (
+    <div className="mb-8 grid items-stretch gap-8 md:grid-cols-3 lg:mb-12">
+      <div
+        className={`flex flex-col justify-center rounded-2xl bg-[#FDF3F0] p-8 md:col-span-2 md:p-12 ${
+          reverse ? "md:order-2" : ""
+        }`}
+      >
+        <h2 className="mb-6 text-4xl font-medium text-[#E7816B]">{title}</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div>
+            <p className="mb-2 text-xl font-bold text-[#333136]">
+              {officeName}
+            </p>
+            <p className="text-[#333136]">
+              {address.map((line, i) => (
+                <span key={i} className="block">
+                  {line}
+                </span>
+              ))}
+            </p>
+          </div>
+          <div>
+            <p className="mb-2 text-xl font-bold text-[#333136]">Contact</p>
+            <p className="text-[#333136]">
+              <span className="block">P : {phone}</span>
+              <span className="block">M : {email}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`relative aspect-square w-full overflow-hidden rounded-2xl ${
+          reverse ? "md:order-1" : ""
+        }`}
+      >
+        <Image
+          src={mapImage}
+          alt={`${title} office location map`}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
+      </div>
+    </div>
+  );
+}
+
+function CTASection() {
+  return (
+    <section className="px-6 py-16">
+      <div className="relative overflow-hidden rounded-2xl bg-[#E7816B] px-6 py-16 text-center text-white md:px-12">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="mb-6 text-4xl font-medium">
+            Let&apos;s talk about your project
+          </h2>
+          <p className="mb-8 text-lg">
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </p>
+          <Link href="/contact">
+            <Button className="bg-white px-8 py-4 text-base font-medium uppercase text-black hover:bg-white/90">
+              Get in touch
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 const locations = [
   {
@@ -30,83 +121,14 @@ const locations = [
   },
 ];
 
-interface LocationCardProps {
-  title: string;
-  officeName: string;
-  address: string[];
-  phone: string;
-  email: string;
-  mapImage: string;
-  reverse?: boolean;
-}
-
-export function LocationCard({
-  title,
-  officeName,
-  address,
-  phone,
-  email,
-  mapImage,
-  reverse = false,
-}: LocationCardProps) {
+export default function LocationsPage() {
   return (
-    <div className="mb-12 grid items-stretch gap-6 sm:mb-16 md:mb-24 md:grid-cols-2 lg:mb-32 lg:gap-8">
-      <div
-        className={`flex flex-col justify-center rounded-2xl bg-[#FDF3F0] p-6 sm:p-8 md:p-10 lg:p-12 ${
-          reverse ? "order-2 md:order-1" : ""
-        }`}
-      >
-        <h2 className="mb-4 text-3xl text-[#E7816B] sm:text-3xl md:mb-6 md:text-4xl">
-          {title}
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
-          <div>
-            <p className="mb-2 font-bold">{officeName}</p>
-            <p className="text-[#333136]">
-              {address.map((line, i) => (
-                <span key={i}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </p>
-          </div>
-          <div>
-            <p className="mb-2 font-bold">Contact</p>
-            <p className="text-[#333136]">
-              P : {phone}
-              <br />M : {email}
-            </p>
-          </div>
-        </div>
+    <main className="mx-auto max-w-7xl">
+      <div className="container px-6 py-16">
+        {locations.map((location) => (
+          <LocationCard key={location.title} {...location} />
+        ))}
       </div>
-      <div
-        className={`relative aspect-[3/2] w-full overflow-hidden rounded-2xl sm:aspect-[4/3] ${
-          reverse ? "order-1 md:order-2" : ""
-        }`}
-      >
-        <Image
-          src={mapImage}
-          alt={`${title} office location map`}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-      </div>
-    </div>
-  );
-}
-
-export default function page() {
-  return (
-    <main className="mx-auto max-w-7xl flex-1">
-      <section className="py-12 md:py-16 lg:py-20">
-        <div className="container px-4 md:px-6">
-          {locations.map((location) => (
-            <LocationCard key={location.title} {...location} />
-          ))}
-        </div>
-      </section>
       <CTASection />
     </main>
   );
