@@ -7,7 +7,10 @@ import { cn } from "@/lib/utils";
 export function ContactSectionComponent({ className }: { className?: string }) {
   return (
     <section
-      className={cn("container mx-auto max-w-7xl px-4 py-16", className)}
+      className={cn(
+        "container mx-auto max-w-7xl translate-y-16 px-4",
+        className,
+      )}
     >
       <div className="relative overflow-hidden rounded-lg bg-[#E7816B] p-8 text-white md:p-16">
         <div className="relative z-10 grid items-center gap-8 md:grid-cols-2">

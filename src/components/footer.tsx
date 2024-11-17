@@ -1,14 +1,12 @@
 "use client";
 
-import { ContactSectionComponent } from "./contact-section";
 import Image from "next/image";
 import Link from "next/link";
 
 export function FooterComponent() {
   return (
-    <footer className="relative bg-black pt-[88px] text-white">
-      <ContactSectionComponent className="absolute -top-[250px] left-0 right-0" />
-      <div className="container mx-auto max-w-7xl px-4 py-16">
+    <footer className="bg-black text-white">
+      <div className="container mx-auto max-w-7xl px-4 pb-16 pt-32">
         <div className="mb-8 flex flex-col items-center justify-between md:flex-row">
           <Link href="/">
             <Image

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ContactSectionComponent } from "@/components/contact-section";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -131,7 +132,7 @@ export default function LocationsPage() {
           <LocationCard key={location.title} {...location} />
         ))}
       </div>
-      <CTASection />
+      <ContactSectionComponent />
     </main>
   );
 }
