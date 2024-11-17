@@ -50,12 +50,16 @@ export function LocationCard({
   reverse = false,
 }: LocationCardProps) {
   return (
-    <div className="mb-16 grid items-center gap-8 md:mb-24 md:grid-cols-2 lg:mb-32">
+    <div className="mb-12 grid items-stretch gap-6 sm:mb-16 md:mb-24 md:grid-cols-2 lg:mb-32 lg:gap-8">
       <div
-        className={`rounded-2xl bg-[#FDF3F0] p-8 md:p-12 ${reverse ? "order-2 md:order-1" : ""}`}
+        className={`flex flex-col justify-center rounded-2xl bg-[#FDF3F0] p-6 sm:p-8 md:p-10 lg:p-12 ${
+          reverse ? "order-2 md:order-1" : ""
+        }`}
       >
-        <h2 className="mb-6 text-4xl text-[#E7816B]">{title}</h2>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <h2 className="mb-4 text-3xl text-[#E7816B] sm:text-3xl md:mb-6 md:text-4xl">
+          {title}
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
           <div>
             <p className="mb-2 font-bold">{officeName}</p>
             <p className="text-[#333136]">
@@ -77,13 +81,16 @@ export function LocationCard({
         </div>
       </div>
       <div
-        className={`relative h-[320px] overflow-hidden rounded-2xl md:h-[400px] ${reverse ? "order-1 md:order-2" : ""}`}
+        className={`relative aspect-[3/2] w-full overflow-hidden rounded-2xl sm:aspect-[4/3] ${
+          reverse ? "order-1 md:order-2" : ""
+        }`}
       >
         <Image
           src={mapImage}
           alt={`${title} office location map`}
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
     </div>
