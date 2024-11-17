@@ -1,5 +1,3 @@
-"use client";
-
 import { LocationCardComponent } from "@/components/location-card";
 
 const locations = [
@@ -19,11 +17,13 @@ const locations = [
 
 export function LocationsGridComponent() {
   return (
-    <section className="container mx-auto px-4 py-16">
-      <div className="grid gap-8 md:grid-cols-3">
-        {locations.map((location) => (
-          <LocationCardComponent key={location.name} {...location} />
-        ))}
+    <section className="py-24">
+      <div className="container mx-auto px-6">
+        <div className="grid place-items-center gap-12 md:grid-cols-3">
+          {locations.map((location) => (
+            <LocationCardComponent key={location.name} {...location} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ const formSchema = z.object({
   message: z.string().min(1, "Can't be empty"),
 });
 
-export function ContactFormComponent() {
+export default function ContactFormComponent() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,12 +40,12 @@ export function ContactFormComponent() {
   }
 
   return (
-    <section className="bg-[#E7816B] text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <h1 className="mb-8 text-4xl font-bold">Contact Us</h1>
-            <p className="text-lg">
+    <section className="rounded-2xl bg-[#E7816B] text-white">
+      <div className="container px-20 py-12">
+        <div className="grid items-start gap-12 md:grid-cols-2">
+          <div className="space-y-8">
+            <h1 className="text-5xl font-medium">Contact Us</h1>
+            <p className="text-lg leading-relaxed">
               Ready to take it to the next level? Let&apos;s talk about your
               project or idea and find out how we can help your business grow.
               If you are looking for unique digital experiences that&apos;s
@@ -53,7 +53,7 @@ export function ContactFormComponent() {
             </p>
           </div>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField
                 control={form.control}
                 name="name"
@@ -63,10 +63,10 @@ export function ContactFormComponent() {
                       <Input
                         placeholder="Name"
                         {...field}
-                        className="rounded-none border-0 border-b bg-transparent text-white placeholder:text-white/70 focus-visible:border-white focus-visible:ring-0"
+                        className="h-12 rounded-none border-0 border-b-2 border-white/30 bg-transparent px-0 text-lg text-white placeholder:text-white/70 hover:border-white/50 focus-visible:border-white focus-visible:ring-0 focus-visible:ring-offset-0"
                       />
                     </FormControl>
-                    <FormMessage className="italic" />
+                    <FormMessage className="mt-2 text-sm italic" />
                   </FormItem>
                 )}
               />
@@ -80,10 +80,10 @@ export function ContactFormComponent() {
                         placeholder="Email Address"
                         type="email"
                         {...field}
-                        className="rounded-none border-0 border-b bg-transparent text-white placeholder:text-white/70 focus-visible:border-white focus-visible:ring-0"
+                        className="h-12 rounded-none border-0 border-b-2 border-white/30 bg-transparent px-0 text-lg text-white placeholder:text-white/70 hover:border-white/50 focus-visible:border-white focus-visible:ring-0 focus-visible:ring-offset-0"
                       />
                     </FormControl>
-                    <FormMessage className="italic" />
+                    <FormMessage className="mt-2 text-sm italic" />
                   </FormItem>
                 )}
               />
@@ -96,10 +96,10 @@ export function ContactFormComponent() {
                       <Input
                         placeholder="Phone"
                         {...field}
-                        className="rounded-none border-0 border-b bg-transparent text-white placeholder:text-white/70 focus-visible:border-white focus-visible:ring-0"
+                        className="h-12 rounded-none border-0 border-b-2 border-white/30 bg-transparent px-0 text-lg text-white placeholder:text-white/70 hover:border-white/50 focus-visible:border-white focus-visible:ring-0 focus-visible:ring-offset-0"
                       />
                     </FormControl>
-                    <FormMessage className="italic" />
+                    <FormMessage className="mt-2 text-sm italic" />
                   </FormItem>
                 )}
               />
@@ -112,16 +112,19 @@ export function ContactFormComponent() {
                       <Textarea
                         placeholder="Your Message"
                         {...field}
-                        className="min-h-[120px] resize-none rounded-none border-0 border-b bg-transparent text-white placeholder:text-white/70 focus-visible:border-white focus-visible:ring-0"
+                        className="min-h-[120px] resize-none rounded-none border-0 border-b-2 border-white/30 bg-transparent px-0 text-lg text-white placeholder:text-white/70 hover:border-white/50 focus-visible:border-white focus-visible:ring-0 focus-visible:ring-offset-0"
                       />
                     </FormControl>
-                    <FormMessage className="italic" />
+                    <FormMessage className="mt-2 text-sm italic" />
                   </FormItem>
                 )}
               />
-              <div className="text-right">
-                <Button type="submit" variant="secondary" size="lg">
-                  Submit
+              <div className="pt-4 text-right">
+                <Button
+                  type="submit"
+                  className="rounded-lg bg-white px-12 py-6 text-[15px] font-medium text-black hover:bg-white/90"
+                >
+                  SUBMIT
                 </Button>
               </div>
             </form>
